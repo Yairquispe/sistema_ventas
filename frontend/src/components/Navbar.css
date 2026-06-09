@@ -1,0 +1,152 @@
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 64px;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2196F3;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar-brand-icon {
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  background: #e3f2fd;
+  color: #2196F3;
+}
+
+.navbar-link.active {
+  background: #2196F3;
+  color: #ffffff;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-username {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar-role-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-role-badge.admin {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.navbar-role-badge.vendedor {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.navbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid #ef5350;
+  background: transparent;
+  color: #ef5350;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-logout-btn:hover {
+  background: #ef5350;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 12px;
+  }
+  .navbar-links {
+    gap: 2px;
+  }
+  .navbar-link {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+  .navbar-username {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 8px 0;
+  }
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .navbar-links {
+    order: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-link {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
